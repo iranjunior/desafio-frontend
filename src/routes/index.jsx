@@ -8,8 +8,10 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/results" component={User} />
+      <Route path="/results/:username" exact component={User} />
     </Switch>
   </BrowserRouter>
+
 );
+
 export default Routes;

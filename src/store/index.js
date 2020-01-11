@@ -7,7 +7,9 @@ import history from '../routes/history';
 
 const middlewares = [routerMiddleware(history)];
 
-const store = createStore(connectRouter(history)(reducers),
-  applyMiddleware(...middlewares));
+const store = createStore(
+  connectRouter(history)(reducers),
+  applyMiddleware(...middlewares),
+);
 
 export default store;

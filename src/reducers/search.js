@@ -1,7 +1,7 @@
 import { CHANGE_USER } from '../constants/actions';
 
 const initialState = {
-  user: '',
+  username: '',
 };
 
 export default (state = initialState, action) => {
@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
     case CHANGE_USER:
       return {
         ...state,
-        user: action.payload,
+        username: action.payload,
       };
     default:
       return state;
