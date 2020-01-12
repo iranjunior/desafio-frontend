@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 [![Build Status](https://travis-ci.org/iranjunior/concrete-desafio-frontend.svg?branch=master)](https://travis-ci.org/iranjunior/concrete-desafio-frontend)
+[![Coverage Status](https://coveralls.io/repos/github/iranjunior/concrete-desafio-frontend/badge.svg?branch=master)](https://coveralls.io/github/iranjunior/concrete-desafio-frontend?branch=master)
 
 ## Available Scripts
 
