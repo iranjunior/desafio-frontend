@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { CHANGE_USERNAME } from '../../constants/actions';
@@ -10,11 +10,11 @@ import {
 const SearchComponent = ({
   history, username, match, dispatch,
 }) => {
-  const handleClick = async (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
     if (username.length) {
       history.push(`/results/${username}`);
-    } else {}
+    }
   };
   const handleSearch = (e) => {
     dispatch({
@@ -25,7 +25,7 @@ const SearchComponent = ({
   return (
     <Container>
       <Input type="text" defaultValue={username} required onChange={handleSearch} />
-      <Submit type="submit" onClick={handleClick}>
+      <Submit type="submit" id="button" onClick={handleClick}>
         <Search />
       </Submit>
     </Container>

@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Provider } from 'react-redux';
 import { render } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
 import User from '../index';
-import * as Payload from './__payloads__/user';
+import * as Payload from './__payloads__/user.json';
 
 let mockStore;
 describe('Testes unitarios do titulo', () => {
@@ -34,7 +35,7 @@ describe('Testes unitarios do titulo', () => {
   it('Deve Falhar devido o payload ir errado', () => {
     const store = mockStore(Payload.Failed);
     try {
-      const Wrapper = render(
+      render(
         <Provider store={store}>
           <User />
         </Provider>,

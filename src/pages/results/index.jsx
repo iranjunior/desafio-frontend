@@ -12,12 +12,12 @@ import User from '../../components/User/index';
 import Repository from '../../components/Repository/index';
 
 const ResultComponent = ({
-  username, user, repos, match, dispatch, history,
+  user, repos, match, dispatch, history,
 }) => {
-  const getUser = async () => {
+  const getUser = async (Api) => {
     try {
       dispatch({
-        type: CHANGE_USERNAME,
+        type: CHANGE_USERNAME || 'CHANGE_USERNAME',
         payload: match.params.username,
       });
       const { data } = await Api.get(`/users/${match.params.username}`);
@@ -49,7 +49,7 @@ const ResultComponent = ({
     }
   };
   useEffect(() => {
-    getUser();
+    getUser(Api);
   }, [match.params.username]);
   useEffect(() => {
     getRepos();
@@ -66,7 +66,7 @@ const ResultComponent = ({
         </Information>
         <Repositories>
           {
-            repos.map((repository) => <Repository repository={repository} />)
+            repos.map((repository) => <Repository key={repository.name} repository={repository} />)
           }
         </Repositories>
       </Content>
@@ -75,7 +75,6 @@ const ResultComponent = ({
 };
 const mapStateToProps = (state) => ({
   ...state,
-  username: state.search.username,
   user: state.user.user,
   repos: state.repos.repositories,
 });

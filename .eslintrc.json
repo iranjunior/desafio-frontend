@@ -7,6 +7,12 @@
     "extends": [
         "airbnb"
     ],
+    "overrides": [{
+        "files": ["*.spec.js"],
+        "rules": {
+            "strict": "off"
+        }
+    }],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
