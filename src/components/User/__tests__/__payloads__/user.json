@@ -1,0 +1,38 @@
+{
+    "Success":{
+      "user":{
+        "user":{
+          "name":"Rubens",
+          "avatar_url":"https://via.placeholder.com/150",
+          "company":"TI computers",
+          "location":"Las Vegas, USA",
+          "public_repos":29,
+          "followers":1900
+        }
+      }
+    },
+    "NoBody":{
+      "user":{
+        "user":{
+          "name":"",
+          "avatar_url":"",
+          "company":"",
+          "location":"",
+          "public_repos":0,
+          "followers":0
+        }
+      }
+    },
+    "Failed":{
+      "user":{
+        "user":{
+          "name":"",
+          "avatar_url":"",
+          "company":"",
+          "location":"",
+          "public_repos":0,
+          "followers":0
+        }
+      }
+    }
+  }

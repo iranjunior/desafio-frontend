@@ -1,0 +1,9 @@
+{
+    "Success":{
+      "name":"Lorem Ipsum",
+      "description":"Non velit minim aliqua laboris elit. Deserunt ullamco laboris laboris mollit. Ea qui laboris cillum adipisicing mollit enim consectetur aliqua aliqua minim cillum pariatur. Dolor cillum enim et aliquip culpa ea do irure sunt labore veniam laborum. Laboris fugiat eu duis reprehenderit pariatur ea aliquip laborum. Pariatur consectetur qui incididunt non consequat consectetur excepteur.",
+      "stargazers_count":12
+    },
+    "NoBody":{"repository":{"name":"","description":"","stargazers_count":0}},
+    "Failed":{"repository":{}}
+  }
