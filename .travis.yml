@@ -11,7 +11,7 @@ jobs:
     install:
         - "yarn install --production=false"
     script: 
-        - yarn test:coverage --detectOpenHandles --forceExit --coverageReporters=text-lcov | coveralls
+        - yarn test:coverage --detectOpenHandles --forceExit --coverageReporters=text-lcov
     deploy: &heroku
         provider: heroku
         app: concrete-iran-frontend
