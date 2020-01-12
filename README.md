@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Build Status](https://travis-ci.org/iranjunior/concrete-desafio-frontend.svg?branch=master)](https://travis-ci.org/iranjunior/concrete-desafio-frontend)
 [![Coverage Status](https://coveralls.io/repos/github/iranjunior/concrete-desafio-frontend/badge.svg?branch=master)](https://coveralls.io/github/iranjunior/concrete-desafio-frontend?branch=master)
+[![dependencies Status](https://david-dm.org/iranjunior/concrete-desafio-frontend/status.svg)](https://david-dm.org/iranjunior/concrete-desafio-frontend)
+[![devDependencies Status](https://david-dm.org/iranjunior/concrete-desafio-frontend/dev-status.svg)](https://david-dm.org/iranjunior/concrete-desafio-frontend?type=dev)
 
 ## Available Scripts
 
