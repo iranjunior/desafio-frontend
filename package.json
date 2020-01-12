@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "coveralls": "^3.0.9",
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -71,16 +72,15 @@
       "!<rootDir>/path/to/dir/"
     ]
   },
-
   "husky": {
     "hooks": {
-        "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
-  "lint-staged":{
+  "lint-staged": {
     "*.js": [
-        "yarn lint",
-        "cross-env CI=true yarn test:coverage --bail --findRelatedTests"
-       ]
-    }
+      "yarn lint",
+      "cross-env CI=true yarn test:coverage --bail --findRelatedTests"
+    ]
+  }
 }
