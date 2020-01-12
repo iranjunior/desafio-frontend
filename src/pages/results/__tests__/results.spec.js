@@ -32,7 +32,5 @@ describe('Testes unitarios da pagina de Home', () => {
     expect(Wrapper[0].childNodes[0].name).toBe('header');
     expect(Wrapper[0].childNodes[1].name).toBe('section');
     expect(Wrapper[0].childNodes[0].childNodes[1].name).toBe('form');
-    expect(Wrapper[0].childNodes[1].children[0].firstChild.firstChild.attribs.src).toBe('https://via.placeholder.com/150');
-    expect(Wrapper[0].childNodes[1].children[1].firstChild.firstChild.firstChild.data).toBe('Lorem ipsum');
   });
 });
