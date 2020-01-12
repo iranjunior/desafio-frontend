@@ -1,4 +1,4 @@
-import { CHANGE_USER } from '../constants/actions';
+import { CHANGE_USERNAME } from '../constants/actions';
 
 const initialState = {
   username: '',
@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_USER:
+    case CHANGE_USERNAME:
       return {
         ...state,
         username: action.payload,

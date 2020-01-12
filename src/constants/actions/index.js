@@ -1,2 +1,3 @@
-export const CHANGE_USER = 'CHANGE_USER';
+export const CHANGE_USERNAME = 'CHANGE_USERNAME';
 export const CHANGE_REPOSITORY = 'CHANGE_REPOSITORY';
+export const CHANGE_USER = 'CHANGE_USER';

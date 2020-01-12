@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    display: flex;
+    align-items: center;
+    justify-items: center;
   margin: 8px;
 `;
 export const Banner = styled.label`    
-  width: 415px;
-  height: 81px;
   font-family: monospace;
   font-size: 60px;
   font-weight: normal;

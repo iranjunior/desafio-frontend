@@ -1,19 +1,20 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.form`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 8px;
 `;
 export const Input = styled.input`
-width: 56%;
+width: 650px;
 height: 46px;
 padding: 0;
 padding-left: 20px;
 color: #777;
 font-size: 18px;
 font-family: monospace;
+text-transform: lowercase;
 box-shadow: 1px 1px 5px 1px #cacaca;
 border-top-left-radius: 3px;
 border-bottom-left-radius: 3px;

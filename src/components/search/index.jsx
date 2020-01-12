@@ -1,34 +1,30 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import { CHANGE_USER } from '../../constants/actions';
+import { CHANGE_USERNAME } from '../../constants/actions';
 import { Search } from '../Icons/index';
 import {
   Container, Input, Submit,
 } from './styles';
 
-const SearchComponent = ({ history, username, dispatch }) => {
-  const [validateInput, setValidateInput] = useState(null);
-
+const SearchComponent = ({
+  history, username, match, dispatch,
+}) => {
   const handleClick = async (e) => {
     e.preventDefault();
     if (username.length) {
-      setValidateInput(true);
       history.push(`/results/${username}`);
-    } else {
-      setValidateInput(false);
-    }
+    } else {}
   };
   const handleSearch = (e) => {
-    setValidateInput(true);
     dispatch({
-      type: CHANGE_USER,
+      type: CHANGE_USERNAME,
       payload: e.target.value,
     });
   };
   return (
     <Container>
-      <Input type="text" defaultValue={username} required validate={validateInput} onChange={handleSearch} />
+      <Input type="text" defaultValue={username} required onChange={handleSearch} />
       <Submit type="submit" onClick={handleClick}>
         <Search />
       </Submit>
