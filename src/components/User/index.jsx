@@ -27,7 +27,7 @@ const User = ({ user }) => (
     <Field>
       <Star />
       <Information>
-        {user.starCounts || 0}
+        {user.startCounts || 0}
       </Information>
     </Field>
     <Field>

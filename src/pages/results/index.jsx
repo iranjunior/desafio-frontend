@@ -55,13 +55,21 @@ const ResultComponent = ({
         const { data } = await Api.get(
           `/users/${match.params.username}/repos`,
         );
+        user.startCounts = data
+          .map((el) => el.stargazers_count)
+          .reduce((acc, curr) => acc + curr);
+        data.sort((a, b) => {
+          if (a.stargazers_count < b.stargazers_count) {
+            return 1;
+          } if (a.stargazers_count > b.stargazers_count) {
+            return -1;
+          }
+          return 0;
+        });
         dispatch({
           type: CHANGE_REPOSITORY,
           payload: data,
         });
-        user.startCounts = data
-          .map((el) => el.stargazers_count)
-          .reduce((acc, curr) => acc + curr);
         dispatch({
           type: CHANGE_USER,
           payload: user,

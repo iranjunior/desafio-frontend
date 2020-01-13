@@ -8,6 +8,7 @@ const initialState = {
     location: '',
     public_repos: 0,
     followers: 0,
+    startCounts: 0,
   },
 };
 
