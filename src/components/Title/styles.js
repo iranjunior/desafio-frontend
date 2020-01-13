@@ -16,6 +16,11 @@ export const Banner = styled.label`
   line-height: normal;
   letter-spacing: normal;
   color: ${colors.black};
+
+  @media only screen and (max-width: 400px){
+    font-size: ${fontSize.small};
+      
+  }
 `;
 export const Detach = styled.label`
   font-family: 'Raleway';

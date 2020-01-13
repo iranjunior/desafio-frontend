@@ -29,7 +29,12 @@ ${(props) => props.validate === false && css`
     border:1px solid ${colors.blue};
     box-shadow: 1px 1px 10px 1px ${colors.blue};
     transition: box-shadow 500ms;
-}
+}@media only screen and (max-width: 400px){
+    padding: 0;
+    max-width: 0;
+    box-shadow: none;
+      
+  }
 `;
 export const Submit = styled.button`
 width: 100px;
@@ -44,7 +49,10 @@ background-color: ${colors.lilac};
     box-shadow: 1px 1px 10px 1px ${colors.lilac};
     transition: box-shadow 500ms;
 }
-
+@media only screen and (max-width: 400px){
+    width: 50px;
+    height: 25px;
+}   
 `;
 export const Logo = styled.img`
 height: 100%;

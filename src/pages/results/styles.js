@@ -10,7 +10,6 @@ const height = keyframes`
     }
 `;
 
-
 export const Container = styled.div`
     align-items: center;
     justify-content: center;
@@ -35,6 +34,10 @@ export const Header = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media only screen and (max-width: 600px){
+        height: 10%;
+        padding: 0;
+    }
 }
 `;
 export const Content = styled.section`
@@ -43,6 +46,9 @@ export const Content = styled.section`
     height: 80vh;
     width: fill-available;
     display: flex;
+    @media only screen and (max-width: 600px){
+        height: auto;
+    }
 `;
 export const Information = styled.aside`
     height: 100%;
@@ -52,13 +58,25 @@ export const Information = styled.aside`
     align-items: flex-start;
     padding-left: 80px;
     animation: ${height} 1000ms ease;
+    @media only screen and (max-width: 600px){
+        padding-left: 0px;
+        width: 0%;
+        position: absolute;
+    }
+`;
+export const RepositoriesSpace = styled.article`
+    height: 100%;
+    width: 100%;
 `;
 export const Repositories = styled.article`
-    height: 100%;
-    width: 70%;
+    height: 90%;
+    width: 100%;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    transition: height 500ms linear;
     ::-webkit-scrollbar-thumb {
-        background-color: ${colors.lilac}; 
+        background-color: ${colors.lilac};
         border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb ::hover {
@@ -69,9 +87,42 @@ export const Repositories = styled.article`
         width: 10px;
     }
 
-/* Track */
+    /* Track */
     ::-webkit-scrollbar-track {
         border-radius: 10px;
     }
     animation: ${height} 800ms ease;
+
+    @media only screen and (max-width: 600px){
+        height: 75%; 
+        width: 100%;
+        ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        }   
+    }
+`;
+export const BottomSpace = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    @media only screen and (max-width: 600px){
+        height: 8%;
+        position: relative;
+        bottom: 20px;
+          
+    }
+`;
+export const ImageHeader = styled.img`
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid ${colors.black};
+    margin: auto;
+    margin-left: 0;
+    @media only screen and (min-width: 600px){
+        display: none;
+          
+    }
 `;

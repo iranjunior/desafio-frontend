@@ -7,18 +7,26 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
+@media only screen and (max-width: 600px){
+    width: 0px;
+    display: none;
+}
+
 `;
 export const Image = styled.img`
 height: 280px;
 width: 280px;
-
 box-shadow: 1px 1px 5px 1px #cacaca;
 border-radius: 2px;
+@media only screen and (max-width: 600px){
+}
 `;
 export const Name = styled.label`
     font-family: 'Raleway';
     font-size: ${fontSize.medium};
     margin-top: 12px;
+    @media only screen and (max-width: 600px){
+    }
 `;
 export const Information = styled.span`    
 font-family: 'Raleway';
@@ -27,6 +35,8 @@ color: ${colors.gray};
 ${(props) => !props.login && css`
 margin-left: 16px;
 `}
+@media only screen and (max-width: 600px){
+}
 `;
 export const Space = styled.br`
     line-height: 2;
@@ -34,4 +44,6 @@ export const Space = styled.br`
 export const Field = styled.div`
 display: flex;
 margin-top: 12px;
+@media only screen and (max-width: 600px){
+}
 `;

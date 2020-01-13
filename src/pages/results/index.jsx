@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import {
   Container,
   Header,
+  ImageHeader,
   Content,
   Information,
+  RepositoriesSpace,
   Repositories,
+  BottomSpace,
 } from './styles';
 import {
   CHANGE_USERNAME,
@@ -20,9 +23,10 @@ import UserNotFound from '../../components/NotFound';
 import Loading from '../../components/Loading';
 import User from '../../components/User/index';
 import Repository from '../../components/Repository/index';
+import ButtonMore from '../../components/More';
 
 const ResultComponent = ({
-  user, repos, match, dispatch, history,
+  user, repos, match, showAll, dispatch, history,
 }) => {
   const [userFound, setUserFound] = useState(null);
 
@@ -61,7 +65,8 @@ const ResultComponent = ({
         data.sort((a, b) => {
           if (a.stargazers_count < b.stargazers_count) {
             return 1;
-          } if (a.stargazers_count > b.stargazers_count) {
+          }
+          if (a.stargazers_count > b.stargazers_count) {
             return -1;
           }
           return 0;
@@ -76,7 +81,7 @@ const ResultComponent = ({
           payload: user,
         });
       }
-    } catch (error) { }
+    } catch (error) {}
   };
   useEffect(() => {
     getUser(Api);
@@ -85,7 +90,7 @@ const ResultComponent = ({
     getRepos();
   }, [user]);
 
-  const RenderItem = () => {
+  const RenderItem = useCallback(() => {
     switch (userFound) {
       case true:
         return (
@@ -93,14 +98,29 @@ const ResultComponent = ({
             <Information>
               <User />
             </Information>
-            <Repositories>
-              {repos.map((repository) => (
-                <Repository
-                  key={repository.name}
-                  repository={repository}
-                />
-              ))}
-            </Repositories>
+            <RepositoriesSpace>
+              <Repositories>
+                {repos.length < 6 || showAll
+                  ? repos.map((repository) => (
+                    <Repository
+                      key={repository.name}
+                      repository={repository}
+                    />
+                  ))
+                  : repos
+                    .slice(0, 5)
+                    .map((repository) => (
+                      <Repository
+                        key={repository.name}
+                        repository={repository}
+                      />
+                    ))}
+              </Repositories>
+              <BottomSpace>
+                <ButtonMore />
+              </BottomSpace>
+            </RepositoriesSpace>
+
           </>
         );
       case false:
@@ -108,7 +128,7 @@ const ResultComponent = ({
       default:
         return <Loading />;
     }
-  };
+  }, [showAll, userFound, repos]);
 
   return (
     <Container>
@@ -116,7 +136,9 @@ const ResultComponent = ({
         <Title />
         <Search match={match} history={history} />
       </Header>
-      <Content>{RenderItem()}</Content>
+      <Content>
+        {RenderItem()}
+      </Content>
     </Container>
   );
 };
@@ -124,6 +146,7 @@ const mapStateToProps = (state) => ({
   ...state,
   user: state.user.user,
   repos: state.repos.repositories,
+  showAll: state.ui.showAll,
 });
 
 export default connect(mapStateToProps)(ResultComponent);
