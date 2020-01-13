@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors, fontSize } from '../../constants/styles';
 
 export const Container = styled.div`
     display: flex;
@@ -8,13 +9,13 @@ export const Container = styled.div`
 `;
 export const Banner = styled.label`    
   font-family: monospace;
-  font-size: 60px;
+  font-size: ${fontSize.large};
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #000000;
+  color: ${colors.black};
 `;
 export const Detach = styled.label`
   font-family: 'Raleway';

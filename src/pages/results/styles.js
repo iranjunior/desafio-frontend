@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../constants/styles';
 
 export const Container = styled.div`
     align-items: center;
@@ -46,11 +47,11 @@ export const Repositories = styled.article`
     width: 70%;
     overflow-y: scroll;
     ::-webkit-scrollbar-thumb {
-        background-color: #ac53f2; 
+        background-color: ${colors.lilac}; 
         border-radius: 10px;
     }
     ::-webkit-scrollbar-thumb ::hover {
-        background-color: #8911e7;
+        background-color: ${colors.lilacHover};
         border-radius: 10px;
     }
     ::-webkit-scrollbar {

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { colors, fontSize } from '../../constants/styles';
 
 export const Container = styled.div`
 height: 100%;
@@ -16,13 +17,13 @@ border-radius: 2px;
 `;
 export const Name = styled.label`
     font-family: 'Raleway';
-    font-size: 35px;
+    font-size: ${fontSize.medium};
     margin-top: 12px;
 `;
 export const Information = styled.span`    
 font-family: 'Raleway';
-font-size: 20px;
-color: #5c5c5c;
+font-size: ${fontSize.small};
+color: ${colors.gray};
 ${(props) => !props.login && css`
 margin-left: 16px;
 `}

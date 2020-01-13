@@ -6,6 +6,6 @@ import Title from '../index';
 describe('Testes unitarios do titulo', () => {
   it('Deve renderizar o componente sem erros', () => {
     const Wrapper = render(<Title />);
-    expect(Wrapper.text()).toBe('Github Search');
+    expect(Wrapper.text()).toMatch(/Github/);
   });
 });

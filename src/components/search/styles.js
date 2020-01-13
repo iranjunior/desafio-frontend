@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { colors } from '../../constants/styles';
+
 export const Container = styled.form`
   display: flex;
   align-items: center;
@@ -24,8 +26,8 @@ ${(props) => props.validate === false && css`
 `}
 
 :hover {
-    border:1px solid cornflowerblue;
-    box-shadow: 1px 1px 10px 1px cornflowerblue;
+    border:1px solid ${colors.blue};
+    box-shadow: 1px 1px 10px 1px ${colors.blue};
     transition: box-shadow 500ms;
 }
 `;
@@ -36,10 +38,10 @@ padding: 0;
 border-style: unset;
 border-top-right-radius: 3px;
 border-bottom-right-radius: 3px;
-background-color: #ac53f2;
+background-color: ${colors.lilac};
 :hover {
     cursor: pointer;
-    box-shadow: 1px 1px 10px 1px #ac53f2;
+    box-shadow: 1px 1px 10px 1px ${colors.lilac};
     transition: box-shadow 500ms;
 }
 

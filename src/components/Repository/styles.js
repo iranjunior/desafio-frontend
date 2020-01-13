@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors, fontSize } from '../../constants/styles';
+
 export const Container = styled.div`
     width: 100%;
     display: flex;
@@ -8,14 +10,14 @@ export const Container = styled.div`
 `;
 export const Title = styled.label`
     font-family: 'Raleway';
-    color: #ac53f2;
+    color: ${colors.lilac};
     margin-bottom: 10px;
-    font-size: 35px;
+    font-size: ${fontSize.medium};
 `;
 export const Description = styled.label`
     font-family: 'Raleway';
-    color: #000;
-    font-size: 20px;
+    color: ${colors.black};
+    font-size: ${fontSize.small};
     margin-bottom: 10px;
 `;
 export const Field = styled.div`
@@ -23,7 +25,7 @@ export const Field = styled.div`
 `;
 export const Stars = styled.label`
     font-family: 'Raleway';
-    color: #5c5c5c;
-    font-size: 20px;
+    color: ${colors.gray};
+    font-size: ${fontSize.small};
     margin-left: 10px;
 `;
