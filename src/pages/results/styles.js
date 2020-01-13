@@ -1,5 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../constants/styles';
+
+const height = keyframes`
+    to{
+        height: 100%;
+    }
+    from{
+        height: 0%;
+    }
+`;
+
 
 export const Container = styled.div`
     align-items: center;
@@ -30,8 +40,8 @@ export const Header = styled.header`
 export const Content = styled.section`
     position: absolute;
     top: 20vh;
-    height: 80%;
-    width: 100%;
+    height: 80vh;
+    width: fill-available;
     display: flex;
 `;
 export const Information = styled.aside`
@@ -41,6 +51,7 @@ export const Information = styled.aside`
     flex-direction: column;
     align-items: flex-start;
     padding-left: 80px;
+    animation: ${height} 1000ms ease;
 `;
 export const Repositories = styled.article`
     height: 100%;
@@ -62,4 +73,5 @@ export const Repositories = styled.article`
     ::-webkit-scrollbar-track {
         border-radius: 10px;
     }
+    animation: ${height} 800ms ease;
 `;

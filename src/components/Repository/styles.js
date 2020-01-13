@@ -8,11 +8,12 @@ export const Container = styled.div`
     flex-direction: column;
     margin-bottom: 30px;
 `;
-export const Title = styled.label`
+export const Title = styled.a`
     font-family: 'Raleway';
     color: ${colors.lilac};
     margin-bottom: 10px;
     font-size: ${fontSize.medium};
+    text-decoration: none;
 `;
 export const Description = styled.label`
     font-family: 'Raleway';

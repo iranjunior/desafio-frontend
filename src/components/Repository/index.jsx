@@ -7,7 +7,7 @@ import {
 export default function Repository({ repository }) {
   return (
     <Container>
-      <Title>{repository.name}</Title>
+      <Title href={repository.html_url}>{repository.name}</Title>
       <Description>
         {' '}
         {repository.description}
