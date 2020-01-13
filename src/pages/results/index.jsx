@@ -66,6 +66,7 @@ const ResultComponent = ({
           }
           return 0;
         });
+
         dispatch({
           type: CHANGE_REPOSITORY,
           payload: data,
@@ -75,9 +76,7 @@ const ResultComponent = ({
           payload: user,
         });
       }
-    } catch (error) {
-      console.table(error);
-    }
+    } catch (error) { }
   };
   useEffect(() => {
     getUser(Api);
