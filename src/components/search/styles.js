@@ -7,9 +7,11 @@ export const Container = styled.form`
   align-items: center;
   justify-content: center;
   margin: 8px;
+  width: 100%;
+
 `;
 export const Input = styled.input`
-width: 650px;
+width: 56%;
 height: 46px;
 padding: 0;
 padding-left: 20px;
@@ -29,12 +31,16 @@ ${(props) => props.validate === false && css`
     border:1px solid ${colors.blue};
     box-shadow: 1px 1px 10px 1px ${colors.blue};
     transition: box-shadow 500ms;
-}@media only screen and (max-width: 400px){
-    padding: 0;
-    max-width: 0;
-    box-shadow: none;
-      
-  }
+}
+
+@media only screen and (max-width: 1400px){
+height: 35px;
+font-size: 15px
+} 
+@media only screen and (max-width: 700px){
+height: 30px;
+font-size: 10px
+} 
 `;
 export const Submit = styled.button`
 width: 100px;
@@ -49,10 +55,15 @@ background-color: ${colors.lilac};
     box-shadow: 1px 1px 10px 1px ${colors.lilac};
     transition: box-shadow 500ms;
 }
-@media only screen and (max-width: 400px){
-    width: 50px;
-    height: 25px;
-}   
+
+@media only screen and (max-width: 1400px){
+height: 35px;
+width: 70px;
+} 
+@media only screen and (max-width: 700px){
+height: 30px;
+width: 60px;
+} 
 `;
 export const Logo = styled.img`
 height: 100%;

@@ -133,7 +133,7 @@ const ResultComponent = ({
   return (
     <Container>
       <Header>
-        <Title />
+        <Title position="initial" history={history} link="actived" />
         <Search match={match} history={history} />
       </Header>
       <Content>

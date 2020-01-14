@@ -14,7 +14,7 @@ export const Title = styled.a`
     margin-bottom: 10px;
     font-size: ${fontSize.medium};
     text-decoration: none;
-    @media only screen and (max-width: 400px){
+    @media only screen and (max-width: 1400px){
         text-overflow: ellipse;
     }
 `;

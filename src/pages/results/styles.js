@@ -34,7 +34,7 @@ export const Header = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 1400px){
         height: 10%;
         padding: 0;
     }
@@ -46,8 +46,9 @@ export const Content = styled.section`
     height: 80vh;
     width: fill-available;
     display: flex;
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 1400px){
         height: auto;
+        flex-direction: column;
     }
 `;
 export const Information = styled.aside`
@@ -58,10 +59,9 @@ export const Information = styled.aside`
     align-items: flex-start;
     padding-left: 80px;
     animation: ${height} 1000ms ease;
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 1400px){
         padding-left: 0px;
-        width: 0%;
-        position: absolute;
+        width: 100%;
     }
 `;
 export const RepositoriesSpace = styled.article`
@@ -93,7 +93,7 @@ export const Repositories = styled.article`
     }
     animation: ${height} 800ms ease;
 
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 1400px){
         height: 75%; 
         width: 100%;
         ::-webkit-scrollbar {
@@ -107,7 +107,7 @@ export const BottomSpace = styled.div`
     display: flex;
     justify-content: center;
     height: 10%;
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 1400px){
         height: 8%;
         position: relative;
         bottom: 20px;
