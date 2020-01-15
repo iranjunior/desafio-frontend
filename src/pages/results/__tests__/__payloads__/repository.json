@@ -21,12 +21,16 @@
                 "description": "Minim ut occaecat culpa pariatur incididunt aliqua. Exercitation Lorem eu ullamco qui magna sint aliqua proident exercitation. Anim esse et adipisicing velit pariatur ex dolor in incididunt velit officia. Consequat eiusmod aliqua quis qui. Pariatur velit laboris nisi mollit consectetur aliquip minim esse sit ullamco laboris velit enim Lorem. Nisi fugiat consectetur ex esse minim. Nulla elit mollit anim voluptate duis ea.",   
                 "stargazers_count": 10
             }]
+        },
+        "ui": {
+            "showAll": false
         }
        },
    "NoBody": { 
        "search": { "username": "" },  
        "user": { "user": {} } ,
-       "repos": { "repositories": [] }
+       "repos": { "repositories": [] },
+       "ui": { "showAll": false }
    },
    "Failed": {}
 }
