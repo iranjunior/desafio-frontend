@@ -14,8 +14,8 @@ import {
   CHANGE_USER,
   CHANGE_REPOSITORY,
 } from '../../constants/actions';
-import Api from '../../services/api';
 
+import Api from '../../services/api';
 import Title from '../../components/Title';
 import Search from '../../components/search';
 import UserNotFound from '../../components/NotFound';
