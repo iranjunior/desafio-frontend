@@ -19,48 +19,40 @@
 	- [Comandos de inicialização](#comandos-de-inicialização)
 - [Estrutura das pastas](#estrutura-das-pastas)
 - [Rotas](#rotas)
-    - [Tabela de rotas](#tabela-de-rotas)
-    - [Exemplos de uso](#exemplos-de-uso)
-        - [Apresentação](#apresentacao)
-        - [Resultado da Busca](#resultado-da-busca)
 ## Sobre o projeto
 
-Este desafio trate-se de uma das etapas no processo seletivo para a Concrete Solutions. Esta aplicação tem como objetivo buscar usuário do Github, e listar seus repositórios públicos. Feito usando React, este projeto traz consigo o uso de libs importantes para construção de uma aplicação segura.
-
+Este desafio trate-se de uma das etapas no processo seletivo para a Concrete Solutions. Esta aplicação tem como objetivo buscar usuário do Github, e listar seus repositórios públicos. Feito usando React, este projeto traz consigo o uso de libs importantes para construção de uma aplicação segura. A aplicacao pode ser vista pelo endereco:  [ Desafio](encurtador.com.br/dfHOY)
+git
 ## Caracteristicas
 - [React](https://pt-br.reactjs.org/)
 - [Lotties](https://airbnb.design/lottie/)
 - Testes automatizado com [Jest](https://jestjs.io/)
 - Organização e padronização de códigos com [ESLint](https://github.com/eslint/eslint)
 - Criação e utilização de variaveis de ambiente com o [dotEnv](https://github.com/motdotla/dotenv)
-- Integração com [Docker](https://www.docker.com/get-started)
+- Offline First
+- Responsividade
 
 
 
 ## Inicialização
 
 ### Requisitos
-- [Node](https://nodejs.org/en/download/) ou [Docker](https://docs.docker.com/install/)
+- [Node](https://nodejs.org/en/download/)
 - [Yarn](https://yarnpkg.com/lang/en/docs/install) ou [NPM](https://www.npmjs.com/get-npm)
 
 ### Clonagem do Projeto
 Para clonar este desadio em seu reositorio local, você ira precisar do [Git](https://git-scm.com/ "Git"), uma vez instalado corretamente você pode executar o comando:
 ```bash
-$ git clone https://github.com/iranjunior/concrete-desafio-frontend.git
+$ git clone https://github.com/iranjunior/desafio-frontend.git
 ```
 ou caso você tenha uma chave ssh configurada:
 ```bash
-$ git clone git@github.com:iranjunior/concrete-desafio-frontend.git
+$ git clone git@github.com:iranjunior/desafio-frontend.git
 ```
 por fim execute o comando para entrar na pasta que foi criada e instalar as dependencias do projeto
 ```bash
 $ cd concrete-desafio-frontend
 $ yarn
-```
-Se caso você tenha o Docker instalado e quiser executar a aplicação por ele basta você executar 
-```bash
-$ cd concrete-desafio-frontend
-$ docker start
 ```
 
 ### Comandos de inicialização
@@ -112,17 +104,3 @@ Rota  |  Descrição
 `GET /`  | Está é a rota raiz de apresentação da aplicação. Onde é possível buscar um usuário.
 `GET /results/: username`  | Está é a rota que apresenta informações sobre o usuário buscado. Como parâmetro para a rota lhe é passado o username do usuário que será listado suas informações
 
-
-### Exemplos de uso
-
-#### Apresentação
----
-```
-GET /
-```
-
-#### Resultado da Busca
----
-```
-GET /results/iranjunior
-```
