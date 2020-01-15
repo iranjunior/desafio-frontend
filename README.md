@@ -22,7 +22,7 @@
 ## Sobre o projeto
 
 Este desafio trate-se de uma das etapas no processo seletivo para a Concrete Solutions. Esta aplicação tem como objetivo buscar usuário do Github, e listar seus repositórios públicos. Feito usando React, este projeto traz consigo o uso de libs importantes para construção de uma aplicação segura. A aplicacao pode ser vista pelo endereco:  [ Desafio](encurtador.com.br/dfHOY)
-
+git
 ## Caracteristicas
 - [React](https://pt-br.reactjs.org/)
 - [Lotties](https://airbnb.design/lottie/)
