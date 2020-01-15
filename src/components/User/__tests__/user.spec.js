@@ -19,8 +19,7 @@ describe('Testes unitarios do titulo', () => {
         <User />
       </Provider>,
     );
-    expect(Wrapper[0].children.length).toBe(9);
-    expect(Wrapper[0].firstChild.attribs.src).toBe('https://via.placeholder.com/150');
+    expect(Wrapper[0].children.length).toBe(3);
   });
   it('Deve renderizar o componente todo vazio devido ao payload vazio', () => {
     const store = mockStore(Payload.NoBody);
@@ -29,8 +28,7 @@ describe('Testes unitarios do titulo', () => {
         <User />
       </Provider>,
     );
-    expect(Wrapper[0].children.length).toBe(9);
-    expect(Wrapper[0].firstChild.attribs.src).toBe('');
+    expect(Wrapper[0].children.length).toBe(3);
   });
   it('Deve Falhar devido o payload ir errado', () => {
     const store = mockStore(Payload.Failed);
