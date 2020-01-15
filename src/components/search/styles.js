@@ -50,6 +50,7 @@ border-style: unset;
 border-top-right-radius: 3px;
 border-bottom-right-radius: 3px;
 background-color: ${colors.lilac};
+box-shadow: 1px 1px 5px 1px #cacaca;
 :hover {
     cursor: pointer;
     box-shadow: 1px 1px 10px 1px ${colors.lilac};

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import {
   Container,
   Header,
-  ImageHeader,
   Content,
   Information,
   RepositoriesSpace,
@@ -29,6 +28,8 @@ const ResultComponent = ({
   user, repos, match, showAll, dispatch, history,
 }) => {
   const [userFound, setUserFound] = useState(null);
+  const userLocal = JSON.parse(localStorage.getItem(match.params.username)) || '';
+  const reposLocal = JSON.parse(localStorage.getItem(`${match.params.username}_repos`)) || '';
 
   const getUser = async (Api) => {
     try {
@@ -37,15 +38,26 @@ const ResultComponent = ({
         type: CHANGE_USERNAME || 'CHANGE_USERNAME',
         payload: match.params.username,
       });
+
+      if (typeof userLocal === 'object') {
+        setUserFound(true);
+        dispatch({
+          type: CHANGE_USER,
+          payload: userLocal,
+        });
+      }
       const { status, data } = await Api.get(
         `/users/${match.params.username}`,
       );
       if (status === 200) {
         setUserFound(true);
-        dispatch({
-          type: CHANGE_USER,
-          payload: data,
-        });
+        if (!userLocal || !Object.values(data).every((value) => Object.values(userLocal).includes(value))) {
+          localStorage.setItem(match.params.username, JSON.stringify(data));
+          dispatch({
+            type: CHANGE_USER,
+            payload: data,
+          });
+        }
       }
     } catch (error) {
       if (error.response.status === 404) {
@@ -56,7 +68,14 @@ const ResultComponent = ({
   const getRepos = async () => {
     try {
       if (user.login) {
-        const { data } = await Api.get(
+        if (typeof reposLocal === 'object') {
+          setUserFound(true);
+          dispatch({
+            type: CHANGE_REPOSITORY,
+            payload: reposLocal,
+          });
+        }
+        const { status, data } = await Api.get(
           `/users/${match.params.username}/repos`,
         );
         user.startCounts = data
@@ -71,15 +90,22 @@ const ResultComponent = ({
           }
           return 0;
         });
-
-        dispatch({
-          type: CHANGE_REPOSITORY,
-          payload: data,
-        });
-        dispatch({
-          type: CHANGE_USER,
-          payload: user,
-        });
+        if (status === 200) {
+          if (!reposLocal || !data.every((value) => reposLocal.includes(value))) {
+            localStorage.setItem(`${match.params.username}_repos`, JSON.stringify(data));
+            dispatch({
+              type: CHANGE_REPOSITORY,
+              payload: data,
+            });
+          }
+          if (!Object.values(userLocal).every((value) => Object.values(user).includes(value)) === false) {
+            localStorage.setItem(`${match.params.username}`, JSON.stringify(user));
+            dispatch({
+              type: CHANGE_USER,
+              payload: user,
+            });
+          }
+        }
       }
     } catch (error) {}
   };
@@ -116,9 +142,13 @@ const ResultComponent = ({
                       />
                     ))}
               </Repositories>
-              <BottomSpace>
-                <ButtonMore />
-              </BottomSpace>
+              {
+                repos.length >= 6 && (
+                <BottomSpace>
+                  <ButtonMore />
+                </BottomSpace>
+                )
+              }
             </RepositoriesSpace>
 
           </>

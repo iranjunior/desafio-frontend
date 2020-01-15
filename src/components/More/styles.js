@@ -24,12 +24,13 @@ export default styled.button`
     color: ${colors.lilac};
     position: relative;
     animation: ${animation} 1.5s infinite;
+        animation-play-state: running;
     
     :hover {
         cursor: pointer;
         box-shadow: 0px 0px 3px 1px ${colors.lilac};
         transition: box-shadow 1000ms ease, font-weight 1000ms ease;
         font-weight: 800;
-        animation: none;
+        animation-play-state: paused;
     }
 `;

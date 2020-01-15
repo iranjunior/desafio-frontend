@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Img from 'react-image';
 import { colors, fontSize } from '../../constants/styles';
 
 export const Container = styled.div`
@@ -24,7 +25,7 @@ export const Header = styled.header`
 }   
 `;
 
-export const Image = styled.img`
+export const Image = styled(Img)`
 height: 280px;
 width: 280px;
 box-shadow: 1px 1px 5px 1px #cacaca;
