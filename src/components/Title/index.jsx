@@ -1,5 +1,5 @@
 import React from 'react';
-import { eng } from '../../constants/Texts';
+import Language from '../../constants/Texts';
 
 import { Container, Banner, Detach } from './styles';
 
@@ -14,7 +14,7 @@ export default function Title({ position, history, link }) {
         {' '}
         <Detach link={link}>
           {' '}
-          {eng.MESSAGE_SEARCH}
+          {Language.MESSAGE_SEARCH}
           {' '}
         </Detach>
       </Banner>
