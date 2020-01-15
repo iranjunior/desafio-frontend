@@ -1,0 +1,15 @@
+{
+    "SuccessShow":{
+      "ui":{
+        "showAll": true
+      }
+    },
+    "SuccessHide":{
+      "ui":{
+        "showAll": false
+        }
+    },
+    "Failed":{
+        "ui":{}
+    }
+  }

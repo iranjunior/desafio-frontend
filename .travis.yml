@@ -20,4 +20,4 @@ jobs:
         app: concrete-iran-frontend
         api_key: $HEROKU_APP_KEY
         on:
-            repo: iranjunior/concrete-desafio-frontend
+            repo: iranjunior/desafio-frontend
