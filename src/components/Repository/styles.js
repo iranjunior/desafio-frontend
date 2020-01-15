@@ -14,6 +14,9 @@ export const Title = styled.a`
     margin-bottom: 10px;
     font-size: ${fontSize.medium};
     text-decoration: none;
+    @media only screen and (max-width: 1400px){
+        text-overflow: ellipse;
+    }
 `;
 export const Description = styled.label`
     font-family: 'Raleway';
