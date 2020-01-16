@@ -19,18 +19,19 @@
 	- [Comandos de inicialização](#comandos-de-inicialização)
 - [Estrutura das pastas](#estrutura-das-pastas)
 - [Rotas](#rotas)
-    - [Tabela de rotas](#tabela-de-rotas)
+
 ## Sobre o projeto
 
-Este desafio trate-se de uma das etapas no processo seletivo para a Concrete Solutions. Esta aplicação tem como objetivo buscar usuário do Github, e listar seus repositórios públicos. Feito usando React, este projeto traz consigo o uso de libs importantes para construção de uma aplicação segura.
-
+Este desafio trate-se de uma das etapas no processo seletivo para a Concrete Solutions. Esta aplicação tem como objetivo buscar usuário do Github, e listar seus repositórios públicos. Feito usando React, este projeto traz consigo o uso de libs importantes para construção de uma aplicação segura. A aplicacao pode ser vista pelo endereco:  [ Desafio](encurtador.com.br/dfHOY)
+git
 ## Caracteristicas
 - [React](https://pt-br.reactjs.org/)
 - [Lotties](https://airbnb.design/lottie/)
 - Testes automatizado com [Jest](https://jestjs.io/)
 - Organização e padronização de códigos com [ESLint](https://github.com/eslint/eslint)
 - Criação e utilização de variaveis de ambiente com o [dotEnv](https://github.com/motdotla/dotenv)
-- Integração com [Docker](https://www.docker.com/get-started)
+- Offline First
+- Responsividade
 
 
 
@@ -43,11 +44,11 @@ Este desafio trate-se de uma das etapas no processo seletivo para a Concrete Sol
 ### Clonagem do Projeto
 Para clonar este desadio em seu reositorio local, você ira precisar do [Git](https://git-scm.com/ "Git"), uma vez instalado corretamente você pode executar o comando:
 ```bash
-$ git clone https://github.com/iranjunior/concrete-desafio-frontend.git
+$ git clone https://github.com/iranjunior/desafio-frontend.git
 ```
 ou caso você tenha uma chave ssh configurada:
 ```bash
-$ git clone git@github.com:iranjunior/concrete-desafio-frontend.git
+$ git clone git@github.com:iranjunior/desafio-frontend.git
 ```
 por fim execute o comando para entrar na pasta que foi criada e instalar as dependencias do projeto
 ```bash

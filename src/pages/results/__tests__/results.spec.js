@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Results from '../index';
 import Payload from './__payloads__/repository.json';
 import Responses from './__payloads__/responses200.json';
-import Api from '../../../services/api';
+import { getUser, getUserRepos } from '../../../services/api';
 
 jest.mock('../../../services/api');
 
@@ -40,10 +40,8 @@ describe('Testes unitarios da pagina de Home', () => {
   });
 
   it('Deve tentar buscar usuarios sem erros', () => {
-    const GithubMock = Api.get.mockImplementation((path) => {
-      if (path.includes('repos')) return { status: 200, data: Responses.repositories };
-      return { status: 200, data: Responses.user };
-    });
+    const GithubUserMock = getUser.mockImplementation(() => Responses.user);
+    const GithubUserReposMock = getUserRepos.mockImplementation(() => Responses.repositories);
     const store = mockStore(Payload.Success);
     const mockMatch = {
       params: {
@@ -55,12 +53,13 @@ describe('Testes unitarios da pagina de Home', () => {
         <Results match={mockMatch} />
       </Provider>,
     );
-    expect(GithubMock).toHaveBeenCalled();
+    expect(GithubUserMock).toHaveBeenCalled();
+    expect(GithubUserReposMock).toHaveBeenCalled();
     expect(Wrapper).toBeDefined();
   });
 
   it('Deve tentar falhar ao buscar usuario', () => {
-    const GithubMock = Api.get.mockRejectedValue({ response: { status: 404 } });
+    const GithubMock = getUser.mockRejectedValue({});
     const store = mockStore(Payload.Success);
     const mockMatch = {
       params: {
