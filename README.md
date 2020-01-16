@@ -1,10 +1,10 @@
 
 # Desafio Frontend React
 
-[![Build Status](https://travis-ci.org/iranjunior/concrete-desafio-frontend.svg?branch=master)](https://travis-ci.org/iranjunior/concrete-desafio-frontend)
-[![Coverage Status](https://coveralls.io/repos/github/iranjunior/concrete-desafio-frontend/badge.svg?branch=master)](https://coveralls.io/github/iranjunior/concrete-desafio-frontend?branch=master)
-[![dependencies Status](https://david-dm.org/iranjunior/concrete-desafio-frontend/status.svg)](https://david-dm.org/iranjunior/concrete-desafio-frontend)
-[![devDependencies Status](https://david-dm.org/iranjunior/concrete-desafio-frontend/dev-status.svg)](https://david-dm.org/iranjunior/concrete-desafio-frontend?type=dev)
+[![Build Status](https://travis-ci.org/iranjunior/desafio-frontend.svg?branch=master)](https://travis-ci.org/iranjunior/desafio-frontend)
+[![Coverage Status](https://coveralls.io/repos/github/iranjunior/desafio-frontend/badge.svg?branch=master)](https://coveralls.io/github/iranjunior/desafio-frontend?branch=master)
+[![dependencies Status](https://david-dm.org/iranjunior/desafio-frontend/status.svg)](https://david-dm.org/iranjunior/desafio-frontend)
+[![devDependencies Status](https://david-dm.org/iranjunior/desafio-frontend/dev-status.svg)](https://david-dm.org/iranjunior/desafio-frontend?type=dev)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/iranjunior/concrete-desafio-frontend)
 
 # Desafio Frontend React
